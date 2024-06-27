@@ -1,0 +1,39 @@
+//Creat New user with POST method
+//scenario 1 user lready exits
+POST http://localhost:3000/register
+Content-Type:application/json
+
+{
+  "username": "adam_richard",
+  "name": "Adam Richard",
+  "password": "richard_567",
+  "gender": "male",
+  "location": "Detroit"
+}
+###
+
+
+//POST login method API 2
+//scenario 1 "invalid user"
+POST http://localhost:3000/login
+Content-Type:application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+
+
+
+###
+//PUT method API 3 Update password
+//scenario1 "invalid current password"
+PUT http://localhost:3000/change-password
+Content-Type:application/json
+
+{
+  "username": "adam_richard",
+  "oldPassword": "richard_567",
+  "newPassword": "richard@123"
+}
+
